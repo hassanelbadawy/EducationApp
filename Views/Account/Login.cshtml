@@ -1,0 +1,46 @@
+﻿@model EducationApp.Models.LoginViewModel
+
+<div class="page-container">
+
+    <div class="app-card">
+
+        <h2 class="page-title">
+            EducationApp
+        </h2>
+
+        <p class="page-subtitle">
+            Student Learning Platform
+        </p>
+
+        @if (ViewBag.Message != null)
+        {
+            <p class="error-message">
+                @ViewBag.Message
+            </p>
+        }
+
+        <form method="post">
+
+            <label>Email</label>
+
+            <input asp-for="Email"
+                   class="form-control"
+                   placeholder="Enter Email" />
+
+            <label>Password</label>
+
+            <input asp-for="Password"
+                   type="password"
+                   class="form-control"
+                   placeholder="Enter Password" />
+
+            <button type="submit"
+                    class="btn-primary-custom">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

@@ -1,32 +1,42 @@
 ﻿@model EducationApp.Models.RegisterViewModel
 
-<h2>Register</h2>
+<div class="page-container">
 
-<form method="post">
+    <div class="app-card">
 
-    <div>
-        <label>Full Name</label>
-        <input asp-for="FullName" />
+        <h2 class="page-title">
+            Create Account
+        </h2>
+
+        <p class="page-subtitle">
+            Join EducationApp Today
+        </p>
+
+        <form method="post">
+
+            <label>Full Name</label>
+
+            <input asp-for="FullName"
+                   class="form-control" />
+
+            <label>Email</label>
+
+            <input asp-for="Email"
+                   class="form-control" />
+
+            <label>Password</label>
+
+            <input asp-for="Password"
+                   type="password"
+                   class="form-control" />
+
+            <button type="submit"
+                    class="btn-primary-custom">
+                Register
+            </button>
+
+        </form>
+
     </div>
 
-    <br />
-
-    <div>
-        <label>Email</label>
-        <input asp-for="Email" />
-    </div>
-
-    <br />
-
-    <div>
-        <label>Password</label>
-        <input asp-for="Password" type="password" />
-    </div>
-
-    <br />
-
-    <button type="submit">
-        Register
-    </button>
-
-</form>
+</div>

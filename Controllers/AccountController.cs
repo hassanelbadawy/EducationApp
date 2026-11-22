@@ -43,5 +43,39 @@ namespace EducationApp.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(LoginViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = _context.Users
+                .FirstOrDefault(x => x.Email == model.Email);
+
+            if (user == null)
+            {
+                ViewBag.Message = "User not found";
+
+                return View(model);
+            }
+
+            if (user.PasswordHash != model.Password)
+            {
+                ViewBag.Message = "Wrong password";
+
+                return View(model);
+            }
+
+            return RedirectToAction("Success");
+        }
     }
+
 }
