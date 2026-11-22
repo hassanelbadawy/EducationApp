@@ -73,9 +73,37 @@ namespace EducationApp.Controllers
 
                 return View(model);
             }
+            HttpContext.Session.SetInt32(
+                "UserId",
+                user.UserId
+            );
 
-            return RedirectToAction("Success");
+            HttpContext.Session.SetString(
+                "FullName",
+                user.FullName
+            );
+
+            HttpContext.Session.SetString(
+                "Email",
+                user.Email
+            );
+
+            return RedirectToAction(
+                "Index",
+                "Dashboard"
+            );
         }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+
+            return RedirectToAction(
+                "Login",
+                "Account"
+            );
+        }
+
     }
+
 
 }
