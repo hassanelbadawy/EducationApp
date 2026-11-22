@@ -1,23 +1,18 @@
-# EducationApp
-
-## Version 0.2
+## Version 0.3
 
 ### Features
 
 - User Registration
 - User Login
-- Login Validation
-- SQL Server Integration
-- Entity Framework Core
-- Professional Unified UI
-- Home Page Redesign
+- Session Management
+- Logout
+- Protected Dashboard
+- Welcome Logged User
+- Unified UI Design
 
-### Technology Stack
+### Security
 
-- ASP.NET Core MVC (.NET 10)
-- Entity Framework Core 10
-- SQL Server LocalDB
-- Bootstrap 5
+- Dashboard cannot be accessed without login
 
 ### Current Progress
 
@@ -25,20 +20,20 @@
 
 ✅ Login
 
-✅ Login Validation
+✅ Dashboard
 
-✅ Unified Design System
+✅ Session
 
-✅ Home Page
+✅ Logout
+
+✅ Route Protection
 
 ### Planned Features
 
-- Password Hashing
-- Authentication Cookies
-- Logout
-- Dashboard
-- Roles (Admin / Student / Instructor)
+- Roles System
+- Admin Panel
+- Instructor Panel
+- Student Panel
 - Courses
 - Lessons
 - Exams
-- Subscription System
