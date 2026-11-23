@@ -1,39 +1,34 @@
-## Version 0.3
+## Version 0.4
 
 ### Features
 
-- User Registration
-- User Login
-- Session Management
-- Logout
-- Protected Dashboard
-- Welcome Logged User
-- Unified UI Design
-
-### Security
-
-- Dashboard cannot be accessed without login
+- Roles System
+- Admin / Instructor / Student
+- Role-Based Authorization
+- User Management Page
+- View Users
+- Edit Users
+- Delete Users
+- Protected Admin Area
 
 ### Current Progress
 
-✅ Registration
+✅ Authentication
 
-✅ Login
+✅ Session Management
 
 ✅ Dashboard
 
-✅ Session
-
 ✅ Logout
 
-✅ Route Protection
+✅ Roles
 
-### Planned Features
+✅ User CRUD
 
-- Roles System
-- Admin Panel
-- Instructor Panel
-- Student Panel
-- Courses
-- Lessons
-- Exams
+### Upcoming Features
+
+- Course Management
+- Lesson Management
+- Exam Management
+- Student Enrollment
+- Subscription System
