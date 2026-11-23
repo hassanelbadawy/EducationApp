@@ -17,8 +17,10 @@ namespace EducationApp.Controllers
                 );
             }
 
-            ViewBag.FullName =
-                HttpContext.Session.GetString("FullName");
+            ViewBag.FullName = HttpContext.Session.GetString("FullName");
+            ViewBag.Role = HttpContext.Session.GetString("Role");
+
+            ViewBag.TestRole = HttpContext.Session.GetString("Role");
 
             return View();
         }

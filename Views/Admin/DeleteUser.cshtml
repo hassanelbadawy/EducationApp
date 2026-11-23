@@ -1,0 +1,35 @@
+﻿@model EducationApp.Models.User
+
+<div class="page-container">
+
+    <div class="app-card">
+
+        <h2 class="page-title">
+            Delete User
+        </h2>
+
+        <p>
+            Are you sure you want to delete:
+        </p>
+
+        <h4>
+            @Model.FullName
+        </h4>
+
+        <form method="post">
+
+            <input asp-for="UserId"
+                   type="hidden" />
+
+            <button type="submit"
+                    class="btn btn-danger">
+
+                Delete User
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

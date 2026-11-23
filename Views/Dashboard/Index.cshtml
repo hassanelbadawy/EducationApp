@@ -13,7 +13,21 @@
             <strong>
                 @ViewBag.FullName
             </strong>
+        </p>
+        <p>
 
+            Role:
+            <strong>
+                @ViewBag.Role
+            </strong>
+            @if (ViewBag.Role == "Admin")
+            {
+                <a asp-controller="Admin"
+                   asp-action="Users"
+                   class="btn btn-primary">
+                    User Management
+                </a>
+            }
         </p>
 
         <hr />

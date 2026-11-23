@@ -1,0 +1,66 @@
+﻿@model List<EducationApp.Models.User>
+
+<div class="container mt-5">
+
+    <div class="app-card">
+
+        <h2 class="page-title">
+            User Management
+        </h2>
+
+        <table class="table table-striped">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Role ID</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var user in Model)
+                {
+                    <tr>
+
+                        <td>@user.UserId</td>
+
+                        <td>@user.FullName</td>
+
+                        <td>@user.Email</td>
+
+                        <td>@user.RoleId</td>
+
+                        <td>
+
+                            <a asp-controller="Admin"
+                               asp-action="EditUser"
+                               asp-route-id="@user.UserId"
+                               class="btn btn-warning">
+
+                                Edit
+
+                            </a>
+                            <a asp-controller="Admin"
+                               asp-action="DeleteUser"
+                               asp-route-id="@user.UserId"
+                               class="btn btn-danger">
+                                Delete
+                            </a>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

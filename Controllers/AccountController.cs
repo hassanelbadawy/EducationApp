@@ -87,11 +87,19 @@ namespace EducationApp.Controllers
                 "Email",
                 user.Email
             );
+            var role = _context.Roles.FirstOrDefault(r => r.RoleId == user.RoleId);
+
+            if (role != null)
+            {
+                HttpContext.Session.SetString("Role", role.RoleName);
+            }
 
             return RedirectToAction(
                 "Index",
                 "Dashboard"
             );
+
+           
         }
         public IActionResult Logout()
         {
